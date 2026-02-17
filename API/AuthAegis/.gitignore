@@ -1,0 +1,71 @@
+# Visual Studio / .NET
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+artifacts/
+publish/
+out/
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+project.assets.json
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# ASP.NET / user secrets
+appsettings.*.json
+secrets.json
+secrets.*.json
+
+# Logs
+*.log
+TestResults/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Certificates and keys
+*.pfx
+*.key
+*.pem
+
+# Coverage and profiling
+coverage/
+coverage*.json
+*.lcov
+
+# Misc
+*.vsix
+*.nupkg
+
+# Node
+node_modules/
+
+# Docker
+docker-compose.override.yml
+
+# Ignore local launch settings
+Properties/launchSettings.json
