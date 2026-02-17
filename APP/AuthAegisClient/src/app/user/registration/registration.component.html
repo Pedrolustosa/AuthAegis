@@ -1,0 +1,45 @@
+<div class="mb-4 h2 text-success">Create an account</div>
+<div class="mb-4 text-secondary">Enter your details to create an account</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control bg-body-secondary" placeholder="Full name" id="fullName"
+            formControlName="fullName">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control bg-body-secondary" placeholder="Email" id="email"
+            formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control bg-body-secondary" placeholder="Password" id="password"
+            formControlName="password">
+    </div>
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control bg-body-secondary" placeholder="Confirm Password"
+            id="confirmPassword" formControlName="confirmPassword">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="acceptTerms" formControlName="acceptTerms">
+        <label class="form-check-label small text-body-secondary" for="acceptTerms">
+            I agree to the <a href="#" class="text-success text-decoration-none fw-medium">Terms of Service</a>
+            and <a href="#" class="text-success text-decoration-none fw-medium">Privacy Policy</a>
+        </label>
+    </div>
+    @if (form.get('acceptTerms')?.invalid && form.get('acceptTerms')?.touched) {
+        <div class="small text-danger mb-2">You must accept the terms to register.</div>
+    }
+    <button type="submit" class="btn btn-success w-100 rounded-3" [disabled]="form.invalid">Register</button>
+    <button type="button" class="btn btn-link text-secondary">Already have an account? Login</button>
+</form>
+<footer class="registration-footer text-center mt-4 pt-3 border-top border-body-secondary">
+    <p class="small text-body-secondary mb-0">
+        By clicking Register, you agree to our
+        <a href="#" class="text-success text-decoration-none fw-medium">Terms of Service</a>
+        and
+        <a href="#" class="text-success text-decoration-none fw-medium">Privacy Policy</a>.
+    </p>
+</footer>
