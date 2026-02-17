@@ -1,0 +1,6 @@
+@AuthAegisAPI_HostAddress = http://localhost:5068
+
+GET {{AuthAegisAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
